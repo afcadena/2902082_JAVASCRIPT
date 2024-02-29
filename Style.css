@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #a9aaac;
+    color: #fff;
+}
+img{
+    width: 40px;
+    right: 82%;
+    position: absolute;
+    
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding-left: 2vw;
+    color: #24252a;
+}
+
+.cont-ul {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.5vw;
+    transition:  all .3s ease 0s;
+}
+
+li:hover {
+    background-color: #008849;
+}
+
+.develop {
+    position: relative;
+}
+
+.ul-second {
+    display: none;
+    position: absolute;
+    margin-top: 1.5vw;
+}
+
+.ul-second > li {
+    width: 190px;
+    transform: translateX(-20px);
+    border-bottom:solid 1px #fff ;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.ul-second > li:hover {
+    background-color: #008849;
+}
+
+.develop:hover > .ul-second {
+    display: block;
+}
+
+@media (max-width:900px) {
+    .logo-java {
+        display: none;
+    }
+}
