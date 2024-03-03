@@ -1,47 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Ejercicios JavaScript</title>
     <link rel="stylesheet" href="Style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
-    <title>Document</title>
 </head>
 <body>
+
+<header>
     <nav>
         <p class="logo-java">Ejercicios JavaScript</p>
         <img src="img/logo1.jpg" alt="img">
+        <!-- Los enlaces del menú de navegación -->
         <ul class="cont-ul">
-            <li class="develop">
-                Operaciones
+            <li class="develop" onclick="mostrarFormulario('operaciones')">Operaciones
                 <ul class="ul-second">
-                    <li class="area">Calcular area de un triangulo</li>
-                    <li class="sumar">Sumar dos numeros</li>
-                    <li class="cuadrado">Elevar un numero al cuadrado</li>
-                    <li class="euros">Pasar de euros a dolares</li>
-                    <li class="area">Area y perimetro de un cuadrado</li>
-                    <li class="volumen">Area y volumen de un cilindro</li>
-                    <li class="circunferencia">Longitud y radio de una circunferencia</li>
-                    <li class="promedio">Calcular el promedio de 3 numeros</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'area')">Calcular área de un triángulo</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'suma')">Sumar dos números</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'cuadrado')">Elevar un número al cuadrado</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'conversion')">Pasar de euros a dólares</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'perimetro')">Área y perímetro de un cuadrado</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'cilindro')">Área y volumen de un cilindro</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'circunferencia')">Longitud y radio de una circunferencia</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'promedio')">Calcular el promedio de 3 números</li>
                 </ul>
             </li>
-            <li>Condicionales</li>
-            <li>Ciclos</li>
-            <li>Arreglos</li>
-            
+            <li onclick="mostrarFormulario('condicionales')">Condicionales</li>
+            <li onclick="mostrarFormulario('ciclos')">Ciclos</li>
+            <li onclick="mostrarFormulario('arreglos')">Arreglos</li>
         </ul>
     </nav>
-    <script>
-        
-    </script>
+</header>
 
-    <!--Footer-->
-    <footer>
 
-    </footer>
+
+
+
+
+
+<main>
+    <!-- Los formularios de operaciones -->
+
+    <script src="ejercicios/ejercicios_operaciones.js"></script>
+    <section id="area" class="sub-container" style="display:none;">
+        <form>
+            <label for="base">Ingrese la base del triángulo:</label>
+            <input type="text" id="base" name="base" placeholder="Ingrese la base">
     
+            <label for="altura">Ingrese la altura del triángulo:</label>
+            <input type="text" id="altura" name="altura" placeholder="Ingrese la altura">
+            <button type="button" class="calcular" onclick="calcularArea()">Calcular</button>
+        </form>
+    </section>
+
+    <!--Segundo ejercicio-->
+    <section id="suma" class="sub-container" style="display:none;">
+        <form>
+            <label for="numero1">Ingrese el primer número:</label>
+            <input type="number" id="numero1" name="numero1" placeholder="Ingrese el primer número">
+    
+            <label for="numero2">Ingrese el segundo número:</label>
+            <input type="number" id="numero2" name="numero2" placeholder="Ingrese el segundo número">
+            <button type="button" class="calcular" onclick="sumarNumeros()">Calcular</button>
+        </form>
+    </section>
+
+    <!--Tercer ejercicio-->
+    <section id="cuadrado" class="sub-container" style="display:none;">
+        <form>
+            <label for="numero">Ingrese un número:</label>
+            <input type="number" id="numero" name="numero" placeholder="Ingrese un número">
+            <button type="button" class="calcular" data-ejercicio="cuadrado">Calcular</button>
+        </form>
+    </section>
+
+    <!--Cuarto ejercicio-->
+    <section id="conversion" class="sub-container" style="display:none;">
+        <form>
+            <label for="cantidad">Ingrese la cantidad en euros:</label>
+            <input type="number" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad en euros">
+            <button type="button" class="calcular" data-ejercicio="conversion">Convertir</button>
+        </form>
+    </section>
+
+    <!--Quinto ejercicio-->
+    <section id="perimetro" class="sub-container" style="display:none;">
+        <form>
+            <label for="lado">Ingrese el lado del cuadrado:</label>
+            <input type="number" id="lado" name="lado" placeholder="Ingrese el lado del cuadrado">
+            <button type="button" class="calcular" data-ejercicio="cuadrado">Calcular</button>
+        </form>
+    </section>
+
+    <!--Sexto ejercicio-->
+    <section id="cilindro" class="sub-container" style="display:none;">
+        <form>
+            <label for="radio">Ingrese el radio de la base:</label>
+            <input type="number" id="radio" name="radio" placeholder="Ingrese el radio de la base">
+    
+            <label for="altura">Ingrese la altura del cilindro:</label>
+            <input type="number" id="altura" name="altura" placeholder="Ingrese la altura del cilindro">
+
+            <button type="button" class="calcular" data-ejercicio="cilindro">Calcular</button>
+        </form>
+    </section>
+
+    <!--Septimo ejercicio-->
+    <section id="circunferencia" class="sub-container" style="display:none;">
+        <form>
+            <label for="radioCircunferencia">Ingrese el radio de la circunferencia:</label>
+            <input type="number" id="radioCircunferencia" name="radioCircunferencia" placeholder="Ingrese el radio de la circunferencia">
+    
+            <button type="button" class="calcular" data-ejercicio="circunferencia">Calcular</button>
+        </form>
+    </section>
+    
+    <!--Octavo ejercicio-->
+    <section id="promedio" class="sub-container" style="display:none;">
+        <form>
+            <label for="numerop1">Ingrese el primer número:</label>
+            <input type="number" id="numerop1" name="numerop1" placeholder="Ingrese el primer número">
+    
+            <label for="numerop2">Ingrese el segundo número:</label>
+            <input type="number" id="numerop2" name="numerop2" placeholder="Ingrese el segundo número">
+    
+            <label for="numerop3">Ingrese el tercer número:</label>
+            <input type="number" id="numerop3" name="numerop3" placeholder="Ingrese el tercer número">
+    
+            <button type="button" class="calcular" data-ejercicio="promedio">Calcular</button>
+        </form>
+    </section>
+    <!-- Ventana emergente -->
+    <section id="modal" class="modal" style="display:none;">
+        <div class="modal_container">
+            <h2 class="modal_title">Resultado</h2>
+            <p id="resultado" class="modal_paragraph"></p>
+            <a href="#" class="modal_close" onclick="cerrarModal()">Cerrar</a>
+        </div>
+    </section>
+
+
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Mi Sitio Web - Todos los derechos reservados.</p>
+    </div>
+<!--script JavaScript -->
+<script src="script.js"></script>
+<script src="main.js"></script>
+
 </body>
+
+</footer>
 </html>
