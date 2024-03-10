@@ -20,7 +20,7 @@
                     <li onclick="mostrarSubFormulario('operaciones', 'suma')">Sumar dos números</li>
                     <li onclick="mostrarSubFormulario('operaciones', 'cuadrado')">Elevar un número al cuadrado</li>
                     <li onclick="mostrarSubFormulario('operaciones', 'conversion')">Pasar de euros a dólares</li>
-                    <li onclick="mostrarSubFormulario('operaciones', 'perimetro')">Área y perímetro de un cuadrado</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'perimetro_cuadrado')">Área y perímetro de un cuadrado</li>
                     <li onclick="mostrarSubFormulario('operaciones', 'cilindro')">Área y volumen de un cilindro</li>
                     <li onclick="mostrarSubFormulario('operaciones', 'circunferencia')">Longitud y radio de una circunferencia</li>
                     <li onclick="mostrarSubFormulario('operaciones', 'promedio')">Calcular el promedio de 3 números</li>
@@ -69,9 +69,9 @@
     <!--Tercer ejercicio-->
     <section id="cuadrado" class="sub-container" style="display:none;">
         <form>
-            <label for="numero">Ingrese un número:</label>
-            <input type="number" id="numero" name="numero" placeholder="Ingrese un número">
-            <button type="button" class="calcular" data-ejercicio="cuadrado">Calcular</button>
+            <label for="numeroC">Ingrese un número:</label>
+            <input type="number" id="numeroC" name="numeroC" placeholder="Ingrese un número">
+            <button type="button" class="calcular" data-ejercicio="cuadrado" onclick="calcularElevado()">Calcular</button>
         </form>
     </section>
 
@@ -80,18 +80,18 @@
         <form>
             <label for="cantidad">Ingrese la cantidad en euros:</label>
             <input type="number" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad en euros">
-            <button type="button" class="calcular" data-ejercicio="conversion">Convertir</button>
+            <button type="button" class="calcular" data-ejercicio="conversion" onclick="convertirEurosADolares()">Convertir</button>
         </form>
     </section>
 
     <!--Quinto ejercicio-->
-    <section id="perimetro" class="sub-container" style="display:none;">
-        <form>
-            <label for="lado">Ingrese el lado del cuadrado:</label>
-            <input type="number" id="lado" name="lado" placeholder="Ingrese el lado del cuadrado">
-            <button type="button" class="calcular" data-ejercicio="cuadrado">Calcular</button>
-        </form>
-    </section>
+<section id="perimetro_cuadrado" class="sub-container" style="display:none;">
+    <form>
+        <label for="lado">Ingrese el lado del cuadrado:</label>
+        <input type="number" id="lado" name="lado" placeholder="Ingrese el lado del cuadrado">
+        <button type="button" class="calcular" data-ejercicio="perimetro_cuadrado" onclick="calcularPerimetroCuadrado()">Calcular</button>
+    </form>
+</section>
 
     <!--Sexto ejercicio-->
     <section id="cilindro" class="sub-container" style="display:none;">

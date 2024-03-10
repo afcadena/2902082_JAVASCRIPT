@@ -82,6 +82,10 @@ li:hover {
     opacity: 0;
     pointer-events: none;
      transition: opacity .6s;
+     justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegurémonos de que la ventana modal esté en la capa superior */
+     
 }
 
 .modal--show{
@@ -102,6 +106,10 @@ li:hover {
     gap: 1em;
     place-items: center;
     grid-auto-columns: 100%;
+    grid-auto-columns: 100%;
+    position: relative; /* Añadimos esta línea para asegurarnos de que los estilos relativos funcionen correctamente */
+    z-index: 99999; /* Asegurémonos de que el contenido de la ventana modal esté en la capa superior */
+    margin-top: 15%; /* Movemos solo el contenido de la ventana modal */
 }
 
 .modal_title{
@@ -146,15 +154,17 @@ li:hover {
     align-items: center;
     height: 100%;
 }
-/*Formulario del area del triangulo*/
+/*Formulario de los Ejercicios de operaciones*/
 form {
     width: 300px;
     padding: 20px;
     border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    color: #000000;
     border-radius: 5px;
     position: relative;
-    left:40%;
-    margin-top: 10%;
+    left:45%;
+    margin-top: 15%;
 }
 
 label {
@@ -176,6 +186,7 @@ button {
     width: 100%;
     padding: 10px;
     background-color: #f7f7f7;
+    border: 1px solid #000000;
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 4px;
@@ -185,6 +196,7 @@ button {
 button:hover {
     background-color: #008849;
     color:#fff;
+    border: 1px solid #000000;
 }
 
 

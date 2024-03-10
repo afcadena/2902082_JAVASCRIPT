@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (ejercicio === 'suma') {
                 sumarNumeros();
             } else if (ejercicio === 'cuadrado') {
-                calcularCuadrado();
+                calcularElevado();
             }else if (ejercicio === 'conversion') {
                 convertirEurosADolares();
             }else if (ejercicio === 'perimetro') {
-                calcularCuadrado();
+                calcularPerimetroCuadrado();
             }else if (ejercicio === 'cilindro') {
                 calcularCilindro();
             }else if (ejercicio === 'circunferencia'){
@@ -39,12 +39,13 @@ function sumarNumeros() {
     var suma = numero1 + numero2;
     mostrarModal('La suma de los números es: ' + suma);
 }
-function calcularCuadrado() {
-    var numero = parseFloat(document.getElementById('numero').value);
+function calcularElevado() {
+    var numero = parseFloat(document.getElementById('numeroC').value);
+    var cuadrado = numero * numero; // Calcula el cuadrado del número
 
-    var resultado = numero * numero;
-    mostrarModal('El número elevado al cuadrado es: ' + resultado);
+    mostrarModal('El cuadrado del número ingresado es: ' + cuadrado.toFixed(2) + '.');
 }
+
 function convertirEurosADolares() {
     var cantidadEuros = parseFloat(document.getElementById('cantidad').value);
 
@@ -54,13 +55,12 @@ function convertirEurosADolares() {
 
     mostrarModal(cantidadEuros + ' euros equivalen a ' + cantidadDolares.toFixed(2) + ' dólares.');
 }
-function calcularCuadrado() {
+function calcularPerimetroCuadrado() {
     var lado = parseFloat(document.getElementById('lado').value);
 
-    var area = lado * lado;
     var perimetro = lado * 4;
 
-    mostrarModal('El área del cuadrado es: ' + area + '. El perímetro del cuadrado es: ' + perimetro + '.');
+    mostrarModal('El perímetro del cuadrado es: ' + perimetro + '.');
 }
 function calcularCilindro() {
     var radio = parseFloat(document.getElementById('radio').value);
