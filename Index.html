@@ -50,7 +50,7 @@
     
             <label for="altura">Ingrese la altura del triángulo:</label>
             <input type="text" id="altura" name="altura" placeholder="Ingrese la altura">
-            <button type="button" class="calcular" onclick="calcularArea()">Calcular</button>
+            <button type="button" class="calcular" data-ejercicio="area" onclick="calcularArea()">Calcular</button>
         </form>
     </section>
 
@@ -62,7 +62,7 @@
     
             <label for="numero2">Ingrese el segundo número:</label>
             <input type="number" id="numero2" name="numero2" placeholder="Ingrese el segundo número">
-            <button type="button" class="calcular" onclick="sumarNumeros()">Calcular</button>
+            <button type="button" class="calcular" data-ejercicio="sumar" onclick="sumarNumeros()">Calcular</button>
         </form>
     </section>
 
@@ -102,7 +102,7 @@
             <label for="altura">Ingrese la altura del cilindro:</label>
             <input type="number" id="altura" name="altura" placeholder="Ingrese la altura del cilindro">
 
-            <button type="button" class="calcular" data-ejercicio="cilindro">Calcular</button>
+            <button type="button" class="calcular" data-ejercicio="cilindro" onclick="calcularCilindro()">Calcular</button>
         </form>
     </section>
 
@@ -112,7 +112,7 @@
             <label for="radioCircunferencia">Ingrese el radio de la circunferencia:</label>
             <input type="number" id="radioCircunferencia" name="radioCircunferencia" placeholder="Ingrese el radio de la circunferencia">
     
-            <button type="button" class="calcular" data-ejercicio="circunferencia">Calcular</button>
+            <button type="button" class="calcular" data-ejercicio="circunferencia" onclick="calcularCircunferencia()">Calcular</button>
         </form>
     </section>
     
@@ -128,7 +128,7 @@
             <label for="numerop3">Ingrese el tercer número:</label>
             <input type="number" id="numerop3" name="numerop3" placeholder="Ingrese el tercer número">
     
-            <button type="button" class="calcular" data-ejercicio="promedio">Calcular</button>
+            <button type="button" class="calcular" data-ejercicio="promedio" onclick="calcularPromedio()">Calcular</button>
         </form>
     </section>
     <!-- Ventana emergente -->
