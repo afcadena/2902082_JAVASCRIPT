@@ -79,6 +79,30 @@ li:hover {
 .develop:hover > .ul-second {
     display: block;
 }
+
+/* condicionales nav bar*/
+.ul-third {
+    display: none;
+    position: absolute;
+    margin-top: 1.5vw;
+    z-index: 999; /* Asegura que .ul-second esté por encima de los formularios */
+}
+
+.ul-third > li {
+    width: 190px;
+    transform: translateX(-20px);
+    border-bottom:solid 1px #fff ;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.ul-third > li:hover {
+    background-color: #008849;
+}
+
+.develop:hover > .ul-third {
+    display: block;
+}
 /*Ventana emergente*/
 .modal{
     position: fixed;
