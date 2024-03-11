@@ -58,10 +58,12 @@ function convertirEurosADolares() {
 function calcularPerimetroCuadrado() {
     var lado = parseFloat(document.getElementById('lado').value);
 
-    var perimetro = lado * 4;
+    var area = lado * lado;
+    var perimetro = 4 * lado;
 
-    mostrarModal('El perímetro del cuadrado es: ' + perimetro + '.');
+    mostrarModal('El área del cuadrado es: ' + area.toFixed(2) + '. El perímetro del cuadrado es: ' + perimetro.toFixed(2) + '.');
 }
+
 function calcularCilindro() {
     var radio = parseFloat(document.getElementById('radio').value);
     var altura = parseFloat(document.getElementById('altura').value);
