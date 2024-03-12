@@ -16,14 +16,14 @@
         <ul class="cont-ul">
             <li class="develop" onclick="mostrarFormulario('operaciones')">Operaciones
                 <ul class="ul-second">
-                    <li onclick="mostrarSubFormulario('operaciones', 'area')">Calcular área de un triángulo</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'area')">Calcular área triángulo</li>
                     <li onclick="mostrarSubFormulario('operaciones', 'suma')">Sumar dos números</li>
                     <li onclick="mostrarSubFormulario('operaciones', 'cuadrado')">Elevar un número al cuadrado</li>
-                    <li onclick="mostrarSubFormulario('operaciones', 'conversion')">Pasar de euros a dólares</li>
-                    <li onclick="mostrarSubFormulario('operaciones', 'perimetro_cuadrado')">Área y perímetro de un cuadrado</li>
-                    <li onclick="mostrarSubFormulario('operaciones', 'cilindro')">Área y volumen de un cilindro</li>
-                    <li onclick="mostrarSubFormulario('operaciones', 'circunferencia')">Longitud y radio de una circunferencia</li>
-                    <li onclick="mostrarSubFormulario('operaciones', 'promedio')">Calcular el promedio de 3 números</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'conversion')"> Euros a dólares</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'perimetro_cuadrado')">Área y perímetro  cuadrado</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'cilindro')">Área y volumen cilindro</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'circunferencia')">Longitud y radio circunferencia</li>
+                    <li onclick="mostrarSubFormulario('operaciones', 'promedio')">Promedio de 3 números</li>
                 </ul>
             </li>
             <li class="develop" onclick="mostrarFormulario('condicionales')">Condicionales
@@ -32,6 +32,9 @@
                     <li onclick="mostrarSubFormulario('condicionales', 'mayor_menor')">Saber cual número es mayor o menor </li>
                     <li onclick="mostrarSubFormulario('condicionales', 'mayor_menor_tres')">Calcular e imprimir el mayor y el menor</li>
                     <li onclick="mostrarSubFormulario('condicionales', 'sumar_restar')">Sumar dos números si A es menor que B o sino restarlos</li>
+                    <li onclick="mostrarSubFormulario('condicionales', 'examinar_cociente')">Examinar Cociente</li>
+                    <li onclick="mostrarSubFormulario('condicionales', 'examinar_suma_multiplicacion')">Examinar si es suma o multiplicación</li>
+                    <li onclick="mostrarSubFormulario('condicionales', 'examinar_año_bisiesto')">Examinar si es año bisiesto o no</li>
                 </ul>
             </li>
             <li onclick="mostrarFormulario('ciclos')">Ciclos</li>
@@ -184,7 +187,37 @@
             <button type="button" class="calcular" data-ejercicio="sumar_restar" onclick="sumarRestar()">Calcular</button>
         </form>
     </section>
+    <!--Quinto Ejercicio-->
+    <section id="examinar_cociente" class="sub-container" style="display:none;">
+        <form>
+            <label for="numeroCo">Ingrese el primer numero: </label>
+            <input type="number" id="numeroCo" name="numeroCo" placeholder="Ingrese el primer numero">
 
+            <label for="numeroCo2">Ingrese el segundo numero: </label>
+            <input type="number" id="numeroCo2" name="numeroCo2" placeholder="Ingrese el segundo numero">
+            <button type="button" class="calcular" data-ejercicio="examinar_cociente" onclick="examinarCociente()">Calcular</button>
+        </form>
+    </section>
+
+    <!--Sexto Ejercicio-->
+    <section id="examinar_suma_multiplicacion" class="sub-container" style="display:none;">
+        <form>
+            <label for="numeroSm">Ingrese el primer numero: </label>
+            <input type="number" id="numeroSm" name="numeroSm" placeholder="Ingrese el primer numero">
+
+            <label for="numeroSm2">Ingrese el segundo numero: </label>
+            <input type="number" id="numeroSm2" name="numeroSm2" placeholder="Ingrese el segundo numero">
+            <button type="button" class="calcular" data-ejercicio="examinar_suma_multiplicacion" onclick="examinarSumaMultiplicacion()">Calcular</button>
+        </form>
+    </section>
+    <!--Septimo Ejercicio-->
+    <section id="examinar_año_bisiesto" class="sub-container" style="display:none;">
+        <form>
+            <label for="numeroBs">Ingrese un número:</label>
+            <input type="text" id="numeroBs" name="numeroBs" placeholder="Ingrese un numero">
+            <button type="button" class="calcular" data-ejercicio="examinar_año_bisiesto" onclick="examinarañoBisiesto()">Calcular</button>
+        </form>
+    </section>
     <!-- Ventana emergente -->
     <section id="modal" class="modal" style="display:none;">
         <div class="modal_container">
@@ -193,6 +226,7 @@
             <a href="#" class="modal_close" onclick="cerrarModal()">Cerrar</a>
         </div>
     </section>
+
 
 
 </main>

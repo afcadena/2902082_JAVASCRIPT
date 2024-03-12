@@ -12,7 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 determinarMayorMenorTres();
             } else if (ejercicio === 'sumar_restar' && subContainerId === 'sumar_restar') {
                 sumarRestar();
-            }
+            } else if(ejercicio === 'examinar_cociente' && subContainerId === 'examinar_cociente'){
+                examinarCociente();
+            } else if(ejercicio === 'examinar_suma_multiplicacion' && subContainerId === 'examinar_suma_multiplicacion'){
+                examinarSumaMultiplicacion()
+            } else if (ejercicio === 'examinar_año_bisiesto' && subContainerId === 'examinar_año_bisiesto'){
+                examinarañoBisiesto()
+            } 
         });
     });
 });
@@ -66,6 +72,48 @@ function sumarRestar() {
         mostrarModal('La resta de los dos números es: ' + resultado + '.');
     }
 }
+function examinarCociente() {
+        var numeroCo1 = parseFloat(document.getElementById("numeroCo").value);
+        var numeroCo2 = parseFloat(document.getElementById("numeroCo2").value);
+    
+        if (numero2 !== 0) {
+            var cociente = numeroCo1 / numeroCo2;
+            mostrarModal("El cociente entre " + numeroCo1.toFixed(2) + " y " + numeroCo2.toFixed(2) + " es: " + cociente);
+        } else {
+            mostrarModal("No es posible dividir por cero. Por favor, ingrese un valor diferente para el segundo numero");
+        }
+    } 
+    function  examinarSumaMultiplicacion() {
+       
+            var numeroSm1 = parseFloat(document.getElementById("numeroSm").value);
+            var numeroSm2 = parseFloat(document.getElementById("numeroSm2").value);
+            var Suma = numeroSm1 + numeroSm2;
+            var Multiplicacion = numeroSm1 * numeroSm2;
+
+            if (numeroSm1 < 0 || numeroSm2 < 0) {
+                mostrarModal("La suma es: " + Suma);
+            } else {
+                mostrarModal("La multiplicacion es: " + Multiplicacion);
+            }
+        } 
+
+    function examinarañoBisiesto() {
+            
+                var numeroBs = parseFloat(document.getElementById("numeroBs").value);
+            
+                if (!isNaN(numeroBs)) {
+                    if ((numeroBs % 4 === 0 && numeroBs % 100 !== 0) || (numeroBs % 400 === 0)) {
+                        mostrarModal(numeroBs + " es año bisiesto.");
+                    } else {
+                        mostrarModal(numeroBs + " no es un año bisiesto.");
+                    }
+                } else {
+                    mostrarModal("Por favor, ingrese un año válido.");
+                }
+            } 
+        
+        
+
 
 // Mostrar y cerrar ventana modal
 function mostrarModal(mensaje) {

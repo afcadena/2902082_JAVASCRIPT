@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 function calcularArea() {
     var base = parseFloat(document.getElementById('base').value);
     var altura = parseFloat(document.getElementById('altura').value);
