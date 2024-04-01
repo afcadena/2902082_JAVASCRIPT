@@ -37,8 +37,16 @@
                     <li onclick="mostrarSubFormulario('condicionales', 'examinar_año_bisiesto')">Examinar si es año bisiesto o no</li>
                 </ul>
             </li>
-            <li onclick="mostrarFormulario('ciclos')">Ciclos</li>
-            <li onclick="mostrarFormulario('arreglos')">Arreglos</li>
+            <li  class="develop" onclick="mostrarFormulario('ciclos')">Ciclos
+                <ul class="ul-third">
+                    <li onclick="mostrarSubFormulario('ciclos', 'Examinar_multiplos')">Examinar múltiplos</li>
+                    <li onclick="mostrarSubFormulario('ciclos', 'Impares')">Impares entre 0 y 100 </li>
+                    <li onclick="mostrarSubFormulario('ciclos', 'Pares')">Pares entre 0 y 100</li>
+                    <li onclick="mostrarSubFormulario('ciclos', 'Numero_Cuadrado')">Examinar cuadrados de los números del 1 al 30</li>
+                    <li onclick="mostrarSubFormulario('ciclos', 'Sumar_Cuadrados')">Sumar los cuadrados de los cien primeros números naturales</li>
+                    <li onclick="mostrarSubFormulario('ciclos', 'dos_naturales')">Generar y mostrar todos los números comprendidos entre ellos en secuencia ascendente</li>
+                    <li onclick="mostrarSubFormulario('ciclos', 'sumar_n_teclado')">Sumar todos los números que se digitan por teclado mientras no sea cero.</li>
+                </ul></li>
         </ul>
     </nav>
 </header>
@@ -216,6 +224,74 @@
             <label for="numeroBs">Ingrese un número:</label>
             <input type="text" id="numeroBs" name="numeroBs" placeholder="Ingrese un numero">
             <button type="button" class="calcular" data-ejercicio="examinar_año_bisiesto" onclick="examinarañoBisiesto()">Calcular</button>
+        </form>
+    </section>
+
+    <!--Formularios de Ciclos-->
+    <script src="ejercicios/ejercicios_ciclos.js"></script>
+
+    <!--Primer Ejercicio-->
+    <section id="Examinar_multiplos" class="sub-container" style="display:none;">
+        <form>
+            <h4>Examinar múltiplos de 3 que hay entre 1 y 100.</h4>
+            <button type="button" class="calcular" data-ejercicio="Examinar_multiplos" onclick="examinarMultiplos()">Ver Múltiplos</button>
+        </form>
+    </section>
+
+    <!--Segundo ejercicio-->
+    <section id="Impares" class="sub-container" style="display:none;">
+        <form>
+            <h4>Impares de 0 a 100.</h4>
+            <button type="button" class="calcular" data-ejercicio="Impares" onclick="ExaminarImpares()">Ver Resultado</button>
+        </form>
+    </section>
+
+    <!--Tercer ejercicio-->
+    <section id="Pares" class="sub-container" style="display:none;">
+        <form>
+            <h4>Pares de 0 a 100.</h4>
+            <button type="button" class="calcular" data-ejercicio="Pares" onclick="examinarpares0a100()">Ver Resultado</button>
+        </form>
+    </section>
+
+    <!--Cuarto ejercicio-->
+    <section id="Numero_Cuadrado" class="sub-container" style="display:none;">
+        <form>
+            <h4>Números cuadrados del 1 al 30</h4>
+            <button type="button" class="calcular" data-ejercicio="Numero_Cuadrado" onclick="examinarnumCuadrado()">Calcular</button>
+        </form>
+    </section>
+    <!--Quinto Ejercicio-->
+    <section id="Sumar_Cuadrados" class="sub-container" style="display:none;">
+        <form>
+            <h4>Sumar los primeros 100 numeros elevados al cuadrado</h4>
+            <button type="button" class="calcular" data-ejercicio="Sumar_Cuadrados" onclick=" examinarcuadrado()">Calcular</button>
+        </form>
+    </section>
+
+    <!--Sexto Ejercicio-->
+    <section id="dos_naturales"class="sub-container" style="display:none;">
+        <form>
+            <label for="numerodn">Ingrese el primer numero: </label>
+            <input type="number" id="numerodn" name="numerodn" placeholder="Ingrese el primer numero">
+
+            <label for="numerodn2">Ingrese el segundo numero: </label>
+            <input type="number" id="numerodn2" name="numerodn2" placeholder="Ingrese el segundo numero">
+            <button type="button" class="calcular" data-ejercicio="dos_naturales" onclick="examinarsecuenciaascendente()">Calcular</button>
+        </form>
+    </section>
+    <!--Septimo Ejercicio-->
+    <section id="sumar_n_teclado" class="sub-container" style="display:none;">
+        <form>
+            <h2>Suma de números</h2>
+        <label for="numerot1">Ingrese el primer número: </label>
+        <input type="number" id="numerot1" name="numerot1" required><br>
+        <label for="numerot2">Ingrese el segundo número: </label>
+        <input type="number" id="numerot2" name="numerot2" required><br>
+        <p id="resultadoParcial"></p>
+        <button type="button" class="calcular" onclick="agregarNumeroteclado()">Agregar</button>
+        <button type="button" class="calcular" onclick="mostrarResultadoFinal()">Mostrar Resultado</button>
+        <button type="button" class="calcular" onclick="reiniciarSuma()">Reiniciar Suma</button>
         </form>
     </section>
     <!-- Ventana emergente -->
